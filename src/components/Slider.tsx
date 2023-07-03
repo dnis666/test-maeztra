@@ -39,7 +39,7 @@ const Slider: React.FC<SliderProps> = ({ images }) => {
                 <img src={Next} alt='Next'></img>
             </button>
             <div className='dots'>
-                {images.map((image, idx) => (
+                {images.map((_image, idx) => (
                     <div 
                         key={idx} 
                         className={`dot ${idx === index ? 'active' : ''}`} 
