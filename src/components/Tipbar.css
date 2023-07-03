@@ -1,0 +1,55 @@
+.tipbar-content {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    gap: 15px;
+    margin-top: 21px;
+}
+
+.tipbar-item {
+    display: flex;
+    max-width: 308px;
+    width: 100%;
+    min-width: 308px;
+    border-radius: 4px;
+    background: var(--color-4500, #EFEFEF);
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.tipbar-item:first-child {
+    margin-left: 36px;
+}
+
+.tipbar h3 {
+    color: var(--color-2500, #353535);
+text-align: center;
+font-size: 16px;
+font-family: Titillium Web;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.tipbar {
+    margin-top: 24px;
+}
+
+.tipbar-item-img {
+    margin-right: 21px;
+}
+
+.tipbar-item-text-box {
+    color: var(--color-2400, #4A4441);
+font-size: 12px;
+font-family: Titillium Web;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.tipbar-item-title {
+    font-weight: 700;
+}

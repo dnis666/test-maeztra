@@ -1,0 +1,45 @@
+.nova-colecao {
+    padding: 0 31px;
+    margin-top: 23px;
+}
+
+.nova-colecao-banner img {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.nova-colecao-banner {
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.nova-colecao-title strong {
+    color: var(--color-2900, #000);
+font-size: 24px;
+font-family: Titillium Web;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 16px;
+}
+
+.nova-colecao-title  {
+    margin-bottom: 16px;
+}
+
+.nova-colecao-content p {
+    color: var(--color-2900, #000);
+font-size: 14px;
+font-family: Titillium Web;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.nova-colecao-content  {
+margin-bottom: 24px;
+}

@@ -1,0 +1,52 @@
+.newsletter {
+  background: var(--color-3500, #fafafa);
+  border-top: 1px solid #353535;
+  border-bottom: 1px solid #353535;
+  margin-top: 39px;
+  padding: 24px 22px;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter input {
+  border-radius: 4px;
+  border: 1px solid var(--color-2500, #353535);
+  background: var(--color-5500, #fff);
+  color: var(--color-2500, #353535);
+  font-size: 14px;
+  font-family: Titillium Web;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 15px;
+  width: 100%;
+  max-width: 204px;
+  padding-left: 24px;
+}
+
+.newsletter button {
+    border-radius: 4px;
+    border: 1px solid var(--color-1500-faa-500, #FAA500);
+    background: var(--color-1500-faa-500, #FAA500);
+    color: var(--color-5500, #FFF);
+    font-size: 14px;
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0 20px;
+}
+
+.title-newsletter h3 {
+  color: var(--color-2500, #353535);
+  text-align: center;
+  font-size: 24px;
+  font-family: Titillium Web;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
