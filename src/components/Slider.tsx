@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 import './Slider.css'
 
+import Prev from "../assets/icon-prev.svg"
+import Next from "../assets/icon-next.svg"
+
 interface SliderProps {
     images: string[];
 }
@@ -22,13 +25,30 @@ const Slider: React.FC<SliderProps> = ({ images }) => {
         setIndex((index + 1) % images.length);
     };
 
+    const handleDotClick = (idx: number) => {
+        setIndex(idx);
+    };
+
     return (
         <div className='slider'>
-            <button className='previous' onClick={goPrevious}>Previous</button>
+            <button className='previous' onClick={goPrevious}>
+                <img src={Prev} alt='Prev'></img>
+            </button>
             <img src={images[index]} alt="Slider" />
-            <button className='next' onClick={goNext}>Next</button>
+            <button className='next' onClick={goNext}>
+                <img src={Next} alt='Next'></img>
+            </button>
+            <div className='dots'>
+                {images.map((image, idx) => (
+                    <div 
+                        key={idx} 
+                        className={`dot ${idx === index ? 'active' : ''}`} 
+                        onClick={() => handleDotClick(idx)}
+                    ></div>
+                ))}
+            </div>
         </div>
     );
 };
 
-export default Slider
+export default Slider;

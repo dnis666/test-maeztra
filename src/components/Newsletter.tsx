@@ -11,7 +11,6 @@ export const Newsletter: React.FC = () => {
         return re.test(email.toLowerCase());
     }
 
-
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
 
@@ -20,6 +19,10 @@ export const Newsletter: React.FC = () => {
         } else {
             setMessage('Por favor, insira um email válido.');
         }
+
+        setTimeout(() => {
+            setMessage('');
+        }, 5000);
     }
 
     return (
@@ -36,8 +39,8 @@ export const Newsletter: React.FC = () => {
                         placeholder="Digite seu e-mail"
                         required />
                     <button type="submit">Enviar</button>
-                    <p>{message}</p>
                 </form>
+            <p className='newslettter-message'>{message}</p>
             </div>
         </>
     );

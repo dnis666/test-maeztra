@@ -50,3 +50,11 @@
   font-weight: 700;
   line-height: normal;
 }
+
+.newsletter p {
+  background-color: green;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  line-height: 25px;
+}

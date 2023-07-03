@@ -53,3 +53,7 @@ line-height: normal;
 .tipbar-item-title {
     font-weight: 700;
 }
+
+::-webkit-scrollbar {
+    display: none;
+  }
