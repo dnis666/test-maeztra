@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
 }
 
 .overlay {
@@ -18,7 +19,9 @@
   position: fixed;
   background: rgba(0, 0, 0, 0.7);
   display: flex;
+  z-index: 1;
 }
+
 
 .modal h1 {
   color:  #464b54;
@@ -61,4 +64,62 @@
   font-style: normal;
   font-weight: 400;
   line-height: 23px;
+}
+
+.modal input {
+  border-radius: 5px;
+  border: 1px solid var(--cor-neutra-color-5500-bebebe, #C4C4C4);
+  background: var(--branco, #FFF);
+  width: 100%;
+  min-width: 258px;
+  padding: 10px 9px;
+  margin-top: 26px;
+  color: var(--color-4, #787D83);
+font-size: 12px;
+font-family: Titillium Web;
+font-style: normal;
+font-weight: 400;
+line-height: 20px;
+}
+
+.modal button {
+  border-radius: 10px;
+  background: #FAA500;
+  color: var(--txt-light-01, #FFF);
+  font-size: 12px;
+  font-family: Titillium Web;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 10px 0;
+  width: 100%;
+  min-width: 258px;
+  border: unset;
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.modal button:disabled {
+  opacity: 0.5;
+}
+
+.modal button img {
+  margin-left: 8px;
+}
+
+.modal p {
+  color: var(--color-4, #787D83);
+  text-align: center;
+  font-size: 12px;
+  font-family: Titillium Web;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 12px;
+  opacity: 0.8;
 }

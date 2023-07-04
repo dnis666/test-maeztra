@@ -5,24 +5,31 @@ import './Slider.css'
 import Prev from "../assets/icon-prev.svg"
 import Next from "../assets/icon-next.svg"
 
-interface SliderProps {
-    images: string[];
+interface Slide {
+    imageUrl: string;
+    title: string;
+    text: string;
+    buttonAction: () => void;
 }
 
-const Slider: React.FC<SliderProps> = ({ images }) => {
+interface SliderProps {
+    slides: Slide[];
+}
+
+const Slider: React.FC<SliderProps> = ({ slides }) => {
     const [index, setIndex] = useState(0);
 
     const goPrevious = () => {
         const newIndex = index - 1;
         if (newIndex < 0) {
-            setIndex(images.length - 1);
+            setIndex(slides.length - 1);
         } else {
             setIndex(newIndex);
         }
     };
 
     const goNext = () => {
-        setIndex((index + 1) % images.length);
+        setIndex((index + 1) % slides.length);
     };
 
     const handleDotClick = (idx: number) => {
@@ -34,12 +41,17 @@ const Slider: React.FC<SliderProps> = ({ images }) => {
             <button className='previous' onClick={goPrevious}>
                 <img src={Prev} alt='Prev'></img>
             </button>
-            <img src={images[index]} alt="Slider" />
+            <div className="slide-content">
+                <img src={slides[index].imageUrl} alt="Slide" />
+                <h2>{slides[index].title}</h2>
+                <p>{slides[index].text}</p>
+                <button className="btn-slider" onClick={slides[index].buttonAction}>Conferir</button>
+            </div>
             <button className='next' onClick={goNext}>
                 <img src={Next} alt='Next'></img>
             </button>
             <div className='dots'>
-                {images.map((_image, idx) => (
+                {slides.map((_slide, idx) => (
                     <div 
                         key={idx} 
                         className={`dot ${idx === index ? 'active' : ''}`} 

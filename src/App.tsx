@@ -9,6 +9,7 @@ import { MarcasParceiras } from "./components/MarcasParceiras"
 import { NovaColecao } from "./components/NovaColecao"
 import { Newsletter } from "./components/Newsletter"
 import Institucional from "./components/Institucional"
+import { Footer } from "./components/Footer"
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
     <NovaColecao></NovaColecao>
     <Newsletter></Newsletter>
     <Institucional></Institucional>
+    <Footer></Footer>
     </>
     
   )

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 import "./WelcomeModal.css"
 import NewsletterMailIcon from "../assets/newsletter-mail-icon.svg"
+import ModalIcon from "../assets/modal-icon.svg"
 
 const WelcomeModal = () => {
     const [showModal, setShowModal] = useState(false);
@@ -52,7 +53,7 @@ const WelcomeModal = () => {
                         />
                         {emailError && <p>{emailError}</p>}
                      </div>
-                    <button type="button" disabled={!!emailError || !email} onClick={() => handleEmailSubmission(email)}>Cadastrar</button>
+                    <button type="button" disabled={!!emailError || !email} onClick={() => handleEmailSubmission(email)}>ENVIAR <img src={ModalIcon} alt='modal-icon'></img></button>
                 </div>
             </div>
 
