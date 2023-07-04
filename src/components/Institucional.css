@@ -43,3 +43,24 @@ font-weight: 400;
 line-height: 18px;
 
 }
+
+@media (min-width: 992px) {
+    .institucional {
+       flex-direction: row;
+       width: 100%;
+       gap: 100px;
+       align-items: start!important;
+       display: flex;
+       justify-self: start;
+
+    }
+    .institucional-content {
+        max-width: 208px;
+    }
+    .institucional-links a{
+        margin-bottom: 24px;
+    }
+    .institucional strong, .institucional span,  .institucional a{
+        display: flex;
+    }
+}

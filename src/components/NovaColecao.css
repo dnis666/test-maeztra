@@ -43,3 +43,23 @@ line-height: normal;
 .nova-colecao-content  {
 margin-bottom: 24px;
 }
+
+@media (min-width: 992px) {
+    .nova-colecao {
+        display: flex;
+        padding: 0 161px;
+    }
+    .nova-colecao-content p {
+        max-width: 420px;
+        margin-right: 64px;
+    }
+    .nova-colecao-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    .nova-colecao-banner {
+        max-width: 1114px;
+    }
+}

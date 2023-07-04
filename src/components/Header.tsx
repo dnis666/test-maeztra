@@ -5,6 +5,8 @@ import IconMenu from "../assets/icon-menu.svg"
 import Logo from "../assets/K28VKvG.png"
 import IconShoppingBag from "../assets/icon-shoppingbag.svg"
 import IconBusca from "../assets/icon-busca.svg"
+import Login from "../assets/icon-user.svg"
+import Wishlist from "../assets/icon-heart.svg"
 
 export function Header() {
 
@@ -53,7 +55,53 @@ export function Header() {
                         </div>}
                     </>
                 ) : (
-                    <></>
+                    <div className="header-desk">
+                        <div className="header-meio">
+                            <div className="logo">
+                                <img src={Logo} alt="Logo" />
+                            </div>
+                            <div className="search">
+                                <input placeholder="O Que Você Busca?" />
+                                <button>Buscar</button>
+                            </div>
+                            <div className="header-institucional">
+                                <div className="login">
+                                    <img src={Login} alt="Login" />
+                                    <span>Minha Conta</span>
+                                </div>
+                                <div className="wishlist">
+                                    <img src={Wishlist} alt="Lista de Desejos" />
+                                    <span>Lista de Desejos</span>
+                                </div>
+                                <div className="shopping-cart">
+                                    <p>Meu Carrinho</p>
+                                    <img src={IconShoppingBag} alt="Shopping Cart" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="menu">
+                            <ul>
+                                <li>
+                                    <span>Novidades</span>
+                                </li>
+                                <li>
+                                    <span>Roupas</span>
+                                </li>
+                                <li>
+                                    <span>Sapatos</span>
+                                </li>
+                                <li>
+                                    <span>Lingerie</span>
+                                </li>
+                                <li>
+                                    <span>Acessórios</span>
+                                </li>
+                                <li>
+                                    <span>OUTLET</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 )
                 }
 

@@ -92,3 +92,15 @@ button.checked {
     overflow: auto;
     gap: 16px;
 }
+
+@media (min-width: 992px) {
+  .product-list {
+    justify-content: center;
+  }
+  .as-mais-pedidas {
+    margin-top: 80px;
+  }
+  .title-as-mais h2 {
+    margin-bottom: 24px;
+  }
+}

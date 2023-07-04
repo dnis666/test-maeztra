@@ -5,18 +5,18 @@ import './Slider.css'
 import Prev from "../assets/icon-prev.svg"
 import Next from "../assets/icon-next.svg"
 
-interface Slide {
-    imageUrl: string;
-    title: string;
-    text: string;
-    buttonAction: () => void;
-}
-
-interface SliderProps {
-    slides: Slide[];
-}
-
-const Slider: React.FC<SliderProps> = ({ slides }) => {
+type SliderProps = {
+    slides: {
+      imageUrlDesktop: string;
+      imageUrlMobile: string;
+      title: string;
+      text: string;
+      buttonAction: () => void;
+    }[];
+    isMobile: boolean;
+  };
+  
+const Slider: React.FC<SliderProps> = ({ slides, isMobile }) => {
     const [index, setIndex] = useState(0);
 
     const goPrevious = () => {
@@ -42,7 +42,7 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
                 <img src={Prev} alt='Prev'></img>
             </button>
             <div className="slide-content">
-                <img src={slides[index].imageUrl} alt="Slide" />
+                <img src={isMobile ? slides[index].imageUrlMobile : slides[index].imageUrlDesktop} alt="Slide" />
                 <h2>{slides[index].title}</h2>
                 <p>{slides[index].text}</p>
                 <button className="btn-slider" onClick={slides[index].buttonAction}>Conferir</button>

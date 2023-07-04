@@ -24,3 +24,10 @@
 .marcas-parceiras-item:first-child {
     margin-left: 64px;
 }
+
+@media (min-width: 992px) {
+    .marcas-parceiras-content {
+        display: flex;
+        justify-content: center;
+    }
+}

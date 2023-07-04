@@ -29,16 +29,16 @@
 }
 
 .newsletter button {
-    border-radius: 4px;
-    border: 1px solid var(--color-1500-faa-500, #FAA500);
-    background: var(--color-1500-faa-500, #FAA500);
-    color: var(--color-5500, #FFF);
-    font-size: 14px;
-    font-family: Titillium Web;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    padding: 0 20px;
+  border-radius: 4px;
+  border: 1px solid var(--color-1500-faa-500, #faa500);
+  background: var(--color-1500-faa-500, #faa500);
+  color: var(--color-5500, #fff);
+  font-size: 14px;
+  font-family: Titillium Web;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0 20px;
 }
 
 .title-newsletter h3 {
@@ -53,8 +53,71 @@
 
 .newsletter p {
   background-color: green;
-  color: #fff;
   width: 100%;
+  color: #fff;
   text-align: center;
   line-height: 25px;
+  font-family: Titillium Web;
+}
+
+@media (min-width: 992px) {
+  .newsletter {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    position: relative;
+  }
+  .newsletter p {
+    background-color: transparent;
+    width: unset;
+    color: #000;
+    text-align: center;
+    line-height: 25px;
+    font-family: Titillium Web;
+    font-style: normal;
+    margin: 0;
+    display: flex;
+  }
+  .newsletter input {
+    border-radius: 4px;
+    border: 1px solid var(--color-2500, #353535);
+    background: var(--color-5500, #fff);
+    display: inline-flex;
+    height: 40px;
+    padding: 0px 138px 0px 24px;
+    align-items: center;
+    flex-shrink: 0;
+    color: var(--color-2500, #353535);
+    font-size: 14px;
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 468px;
+    margin-right: 0;
+  }
+  .newsletter button {
+    border-radius: 4px;
+    border: 1px solid var(--color-1500-faa-500, #faa500);
+    background: var(--color-1500-faa-500, #faa500);
+    display: flex;
+    width: 131px;
+    padding: 8px 43px 8px 44px;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-5500, #fff);
+    font-size: 16px;
+    font-family: Titillium Web;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .title-newsletter {
+    margin-right: 15px;
+  }
 }
